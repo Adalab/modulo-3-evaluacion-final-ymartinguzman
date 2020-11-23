@@ -13,21 +13,27 @@ const App = (props) => {
   useEffect(() => {
     api.getDataFromApi().then((data) => {
       setCharacters(data.results);
-      console.log(data);
     });
-    console.log('me monto');
   }, []);
 
   //eventos
   const handleSearch = (filteredText) => {
-    console.log('me han cambiado', filteredText);
+    setSearch(filteredText);
   };
+
+  const filterCharacters = characters.filter((character) => {
+    return character.name.toLowerCase().includes(search.toLowerCase());
+  });
+
   return (
     <>
       <header></header>
       <main>
         <Filter handleSearch={handleSearch} />
-        <CharacterList characters={characters} handleSearch={handleSearch} />
+        <CharacterList
+          characters={filterCharacters}
+          handleSearch={handleSearch}
+        />
       </main>
       <footer></footer>
     </>
