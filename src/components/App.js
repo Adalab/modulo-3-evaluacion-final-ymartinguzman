@@ -4,6 +4,7 @@ import api from '../services/api';
 import { useEffect, useState } from 'react';
 import Filter from './Filters';
 import { Route, Switch } from 'react-router-dom';
+import CharacterDetail from './CharacterDetail';
 
 const App = (props) => {
   //states
@@ -30,21 +31,15 @@ const App = (props) => {
     <>
       <header></header>
       <main>
+        <Filter handleSearch={handleSearch} />
         <Switch>
-          <Route
-            exact
-            path="/"
-            component={<Filter handleSearch={handleSearch} />}
-          />
-          <Route
-            path="/characterlist"
-            component={
-              <CharacterList
-                characters={filterCharacters}
-                handleSearch={handleSearch}
-              />
-            }
-          />
+          <Route exact path="/">
+            <CharacterList
+              characters={filterCharacters}
+              handleSearch={handleSearch}
+            />
+          </Route>
+          <Route path="/characterlist" component={CharacterDetail} />
         </Switch>
       </main>
       <footer></footer>
