@@ -3,6 +3,7 @@ import CharacterList from './CharacterList';
 import api from '../services/api';
 import { useEffect, useState } from 'react';
 import Filter from './Filters';
+import { Route, Switch } from 'react-router-dom';
 
 const App = (props) => {
   //states
@@ -29,11 +30,22 @@ const App = (props) => {
     <>
       <header></header>
       <main>
-        <Filter handleSearch={handleSearch} />
-        <CharacterList
-          characters={filterCharacters}
-          handleSearch={handleSearch}
-        />
+        <Switch>
+          <Route
+            exact
+            path="/"
+            component={<Filter handleSearch={handleSearch} />}
+          />
+          <Route
+            path="/characterlist"
+            component={
+              <CharacterList
+                characters={filterCharacters}
+                handleSearch={handleSearch}
+              />
+            }
+          />
+        </Switch>
       </main>
       <footer></footer>
     </>
