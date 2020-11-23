@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Filter = (props) => {
+  const handleSearch = (ev) => {
+    props.handleSearch(ev.currentTarget.value);
+  };
   return (
     <>
       <form>

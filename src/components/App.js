@@ -5,8 +5,9 @@ import { useEffect, useState } from 'react';
 import Filter from './Filters';
 
 const App = (props) => {
-  // const [search, setSearch] = useState('');
+  //states
   const [characters, setCharacters] = useState([]);
+  const [search, setSearch] = useState('');
 
   //api
   useEffect(() => {
@@ -17,12 +18,16 @@ const App = (props) => {
     console.log('me monto');
   }, []);
 
+  //eventos
+  const handleSearch = (filteredText) => {
+    console.log('me han cambiado', filteredText);
+  };
   return (
     <>
       <header></header>
       <main>
-        <Filter />
-        <CharacterList characters={characters} />
+        <Filter handleSearch={handleSearch} />
+        <CharacterList characters={characters} handleSearch={handleSearch} />
       </main>
       <footer></footer>
     </>
