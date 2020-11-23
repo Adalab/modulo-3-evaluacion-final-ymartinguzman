@@ -1,18 +1,30 @@
 import '../stylesheets/App.scss';
 import CharacterList from './CharacterList';
 import api from '../services/api';
+import { useEffect, useState } from 'react';
+import Filter from './Filters';
 
-api.getDataFromApi();
+const App = (props) => {
+  // const [search, setSearch] = useState('');
+  const [characters, setCharacters] = useState([]);
 
-const App = () => {
+  //api
+  useEffect(() => {
+    api.getDataFromApi().then((data) => {
+      setCharacters(data.results);
+      console.log(data);
+    });
+    console.log('me monto');
+  }, []);
+
   return (
     <>
-      <div>Hola</div>
-      {/* <header></header>
+      <header></header>
       <main>
-        <CharacterList />
+        <Filter />
+        <CharacterList characters={characters} />
       </main>
-      <footer></footer> */}
+      <footer></footer>
     </>
   );
 };

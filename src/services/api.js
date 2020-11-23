@@ -1,12 +1,9 @@
 const getDataFromApi = () => {
-  fetch(
+  return fetch(
     'https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json'
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data.results);
-    });
+  ).then((response) => response.json());
 };
+
 export default {
   getDataFromApi: getDataFromApi,
 };
