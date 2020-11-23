@@ -1,16 +1,20 @@
 import '../stylesheets/App.scss';
 import CharacterList from './CharacterList';
+import api from '../services/api';
 
-function App() {
+api.getDataFromApi();
+
+const App = () => {
   return (
-    <div>
-      <header></header>
+    <>
+      <div>Hola</div>
+      {/* <header></header>
       <main>
         <CharacterList />
       </main>
-      <footer></footer>
-    </div>
+      <footer></footer> */}
+    </>
   );
-}
+};
 
 export default App;
