@@ -1,10 +1,10 @@
 import '../stylesheets/App.scss';
-import CharacterList from './CharacterList';
 import api from '../services/api';
-import { useEffect, useState } from 'react';
+import CharacterList from './CharacterList';
 import Filter from './Filters';
-import { Route, Switch } from 'react-router-dom';
 import CharacterDetail from './CharacterDetail';
+import { useEffect, useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 const App = (props) => {
   //states
@@ -33,7 +33,16 @@ const App = (props) => {
       return routeCharacterId === character.id;
     });
     if (foundCharacter) {
-      return <h1>Hola</h1>;
+      return (
+        <CharacterDetail
+          image={foundCharacter.image}
+          name={foundCharacter.name}
+          status={foundCharacter.status}
+          species={foundCharacter.species}
+          origin={foundCharacter.origin.name}
+          episodes={foundCharacter.episode.id}
+        />
+      );
     } else {
       return <p>Personaje no encontrado</p>;
     }

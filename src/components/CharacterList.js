@@ -6,7 +6,7 @@ const CharacterList = (props) => {
   const html = props.characters.map((item) => (
     <li key={item.id}>
       <Link to={`/character-detail/${item.id}`} title="Character info">
-        Home
+        More info
       </Link>
       <CharacterCard
         id={item.id}
@@ -18,7 +18,9 @@ const CharacterList = (props) => {
   ));
   return (
     <>
-      <ul>{html}</ul>
+      <ul>
+        <a href>{html}</a>
+      </ul>
     </>
   );
 };
