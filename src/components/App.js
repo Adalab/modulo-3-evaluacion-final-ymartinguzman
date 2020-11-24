@@ -11,6 +11,7 @@ const App = (props) => {
   //states
   const [characters, setCharacters] = useState([]);
   const [search, setSearch] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
 
   //api
   useEffect(() => {
@@ -28,25 +29,29 @@ const App = (props) => {
     }
   };
   const handleCheck = (checked) => {
-    if (setCharacters === checked) {
-      characters.sort();
-    }
+    setIsChecked(checked);
   };
-  // const orderCharacters = characters;
-
-  // => {
-  //   if (a.name > b.name) {
-  //     return 1;
-  //   } else if (a.name > b.name) {
-  //     return -1;
-  //   } else {
-  //     return 0;
-  //   }
-  // });
 
   //filter characters
   const filterCharacters = characters.filter((character) => {
-    return character.name.toLowerCase().includes(search.toLowerCase());
+    const characterSearch = character.name
+      .toLowerCase()
+      .includes(search.toLowerCase());
+    return characterSearch;
+
+    // if (isChecked === true) {
+    //   characterSearch.sort((a, b) => {
+    //     if (a.name > b.name) {
+    //       return 1;
+    //     }
+    //     if (a.name < b.name) {
+    //       return -1;
+    //     }
+    //     return 0;
+    //   });
+    // } else {
+    //   return characterSearch;
+    // }
   });
   //find characters
   const renderDetail = (props) => {
