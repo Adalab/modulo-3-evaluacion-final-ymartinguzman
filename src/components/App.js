@@ -50,10 +50,9 @@ const App = (props) => {
           episodes={foundCharacter.episode.id}
         />
       );
-    } else if (routeCharacterId !== props.id) {
-      <p>Character not found</p>;
+    } else {
+      return <p>Character not found</p>;
     }
-    console.log(routeCharacterId);
   };
 
   return (
