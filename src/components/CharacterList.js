@@ -17,22 +17,27 @@ const CharacterList = (props) => {
     );
   }
   const html = props.characters.map((item) => (
-    <li key={item.id}>
-      <Link to={`/character-detail/${item.id}`} title="Character info">
-        More info
+    <li className="card" key={item.id}>
+      <Link
+        className="links"
+        to={`/character-detail/${item.id}`}
+        title="Character info"
+      >
+        <div className="character">
+          <CharacterCard
+            id={item.id}
+            picture={item.image}
+            name={item.name}
+            specie={item.species}
+          />
+        </div>
       </Link>
-      <CharacterCard
-        id={item.id}
-        picture={item.image}
-        name={item.name}
-        specie={item.species}
-      />
     </li>
   ));
 
   return (
     <>
-      <ul>{html}</ul>
+      <ul className="list-container">{html}</ul>
     </>
   );
 };

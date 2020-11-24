@@ -2,6 +2,7 @@ import '../stylesheets/App.scss';
 import api from '../services/api';
 import CharacterList from './CharacterList';
 import Filter from './Filters';
+import Header from './Header';
 import CharacterDetail from './CharacterDetail';
 import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
@@ -26,6 +27,22 @@ const App = (props) => {
       event.preventDefault();
     }
   };
+  const handleCheck = (checked) => {
+    if (setCharacters === checked) {
+      characters.sort();
+    }
+  };
+  // const orderCharacters = characters;
+
+  // => {
+  //   if (a.name > b.name) {
+  //     return 1;
+  //   } else if (a.name > b.name) {
+  //     return -1;
+  //   } else {
+  //     return 0;
+  //   }
+  // });
 
   //filter characters
   const filterCharacters = characters.filter((character) => {
@@ -57,9 +74,9 @@ const App = (props) => {
 
   return (
     <>
-      <header></header>
-      <main>
-        <Filter handleSearch={handleSearch} />
+      <Header />
+      <main className="main-container">
+        <Filter handleSearch={handleSearch} handleCheck={handleCheck} />
         <Switch>
           <Route exact path="/">
             <CharacterList
