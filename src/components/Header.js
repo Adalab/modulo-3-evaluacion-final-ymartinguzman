@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
   const handleStart = () => {
-    window.scrollTo(0, 850);
+    window.scrollTo(0, 950);
   };
   return (
     <header className="header">
