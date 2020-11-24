@@ -19,19 +19,26 @@ const App = (props) => {
   }, []);
 
   //eventos
-  const handleSearch = (filteredText) => {
-    setSearch(filteredText);
+  const handleSearch = (filteredText, event) => {
+    if (filteredText) {
+      setSearch(filteredText);
+    } else if (setSearch('')) {
+      event.preventDefault();
+    }
   };
 
+  //filter characters
   const filterCharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(search.toLowerCase());
   });
-
+  //find characters
   const renderDetail = (props) => {
     const routeCharacterId = parseInt(props.match.params.characterId);
     const foundCharacter = characters.find((character) => {
       return routeCharacterId === character.id;
     });
+    console.log(foundCharacter);
+
     if (foundCharacter) {
       return (
         <CharacterDetail
@@ -43,9 +50,10 @@ const App = (props) => {
           episodes={foundCharacter.episode.id}
         />
       );
-    } else {
-      return <p>Personaje no encontrado</p>;
+    } else if (routeCharacterId !== props.id) {
+      <p>Character not found</p>;
     }
+    console.log(routeCharacterId);
   };
 
   return (
@@ -60,10 +68,7 @@ const App = (props) => {
               handleSearch={handleSearch}
             />
           </Route>
-          <Route
-            path="/character-detail/:characterId"
-            component={renderDetail}
-          />
+          <Route path="/character-detail/:characterId" render={renderDetail} />
         </Switch>
       </main>
       <footer></footer>

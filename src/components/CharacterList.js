@@ -18,9 +18,7 @@ const CharacterList = (props) => {
   ));
   return (
     <>
-      <ul>
-        <a href>{html}</a>
-      </ul>
+      <ul>{html}</ul>
     </>
   );
 };
