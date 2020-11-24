@@ -27,6 +27,18 @@ const App = (props) => {
     return character.name.toLowerCase().includes(search.toLowerCase());
   });
 
+  const renderDetail = (props) => {
+    const routeCharacterId = parseInt(props.match.params.characterId);
+    const foundCharacter = characters.find((character) => {
+      return routeCharacterId === character.id;
+    });
+    if (foundCharacter) {
+      return <h1>Hola</h1>;
+    } else {
+      return <p>Personaje no encontrado</p>;
+    }
+  };
+
   return (
     <>
       <header></header>
@@ -41,7 +53,7 @@ const App = (props) => {
           </Route>
           <Route
             path="/character-detail/:characterId"
-            component={CharacterDetail}
+            component={renderDetail}
           />
         </Switch>
       </main>
