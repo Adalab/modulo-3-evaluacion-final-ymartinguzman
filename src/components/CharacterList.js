@@ -6,7 +6,7 @@ import image from '../images/noresults.jpg';
 const CharacterList = (props) => {
   if (props.characters.length === 0) {
     return (
-      <div>
+      <div className="container-results">
         <p>No results found!</p>
         <img
           src={image}
@@ -18,11 +18,7 @@ const CharacterList = (props) => {
   }
   const html = props.characters.map((item) => (
     <li className="card" key={item.id}>
-      <Link
-        className="links"
-        to={`/character-detail/${item.id}`}
-        title="Character info"
-      >
+      <Link to={`/character-detail/${item.id}`} title="Character info">
         <div className="character">
           <CharacterCard
             id={item.id}

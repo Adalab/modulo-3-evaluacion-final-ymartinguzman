@@ -92,7 +92,7 @@ const App = (props) => {
           <Route path="/character-detail/:characterId" render={renderDetail} />
         </Switch>
       </main>
-      <footer></footer>
+      <footer className="footer"></footer>
     </>
   );
 };

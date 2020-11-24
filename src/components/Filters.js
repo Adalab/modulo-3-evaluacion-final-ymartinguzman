@@ -10,17 +10,21 @@ const Filter = (props) => {
   };
   return (
     <div className="input-container">
-      <form>
-        <label htmlFor="name"></label>
+      <form className="formulaire">
+        <label htmlFor="name"></label>Which character are you looking for?
         <input
           className="input"
           type="text"
-          placeholder="Search by character"
+          placeholder="E.g. Rick Sanchez"
           onChange={handleSearch}
           value={props.search}
         ></input>
-        <label htmlFor="check"></label>
-        <input type="checkbox" onChange={handleCheck}></input>
+        <label htmlFor="check"> Sort by name</label>
+        <input
+          type="checkbox"
+          className="checkbox"
+          onChange={handleCheck}
+        ></input>
       </form>
     </div>
   );
