@@ -47,7 +47,7 @@ const App = (props) => {
           status={foundCharacter.status}
           species={foundCharacter.species}
           origin={foundCharacter.origin.name}
-          episodes={foundCharacter.episode.id}
+          episodes={foundCharacter.episode.length}
         />
       );
     } else {
