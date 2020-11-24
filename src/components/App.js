@@ -39,7 +39,10 @@ const App = (props) => {
               handleSearch={handleSearch}
             />
           </Route>
-          <Route path="/characterlist" component={CharacterDetail} />
+          <Route
+            path="/character-detail/:characterId"
+            component={CharacterDetail}
+          />
         </Switch>
       </main>
       <footer></footer>
