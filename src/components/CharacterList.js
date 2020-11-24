@@ -6,14 +6,18 @@ import image from '../images/noresults.jpg';
 const CharacterList = (props) => {
   if (props.characters.length === 0) {
     return (
-      <div className="container-results">
-        <p>No results found!</p>
-        <img
-          src={image}
-          alt="No results founded"
-          title="No results founded"
-        ></img>
-      </div>
+      <>
+        <div className="container-results">
+          <Link to="/" className="linkresults">
+            Home
+          </Link>
+          <img
+            src={image}
+            alt="No results founded"
+            title="No results founded"
+          ></img>
+        </div>
+      </>
     );
   }
   const html = props.characters.map((item) => (
