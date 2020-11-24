@@ -1,7 +1,16 @@
 import React from 'react';
 
 const Header = () => {
-  return <div className="header"></div>;
+  const handleStart = () => {
+    window.scrollTo(0, 850);
+  };
+  return (
+    <header className="header">
+      <button className="btn-header" onClick={handleStart}>
+        START
+      </button>
+    </header>
+  );
 };
 
 export default Header;
