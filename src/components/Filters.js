@@ -20,12 +20,14 @@ const Filter = (props) => {
           onChange={handleSearch}
           value={props.search}
         ></input>
-        <label htmlFor="check"> Sort by name</label>
-        <input
-          type="checkbox"
-          className="checkbox"
-          onChange={handleCheck}
-        ></input>
+        <div>
+          <label htmlFor="check"> Sort by name</label>
+          <input
+            type="checkbox"
+            className="checkbox"
+            onChange={handleCheck}
+          ></input>
+        </div>
       </form>
     </div>
   );
