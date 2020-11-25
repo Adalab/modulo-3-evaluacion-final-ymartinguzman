@@ -14,6 +14,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
 }
 .btn-header {
   font-size: 15px;
@@ -23,7 +25,6 @@
   animation-duration: 2s;
   animation-iteration-count: infinite;
   background: linear-gradient(#d7ff00, #0bfb02);
-  margin-left: 48%;
   margin-top: 50%;
   width: 120px;
   height: 50px;
@@ -50,11 +51,15 @@
 }
 .card-container {
   display: flex;
-  width: 550px;
-  height: 325px;
+  flex-direction: column;
+  max-width: 90%;
+  height: auto;
   margin-top: 90px;
   background-color: white;
   box-shadow: 0px 0px 24px 10px #35afc7;
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 .card-details {
   margin-left: 20px;
@@ -64,6 +69,15 @@
 }
 .card-paragraph {
   padding: 5px;
+}
+.card-text {
+  font-size: 15px;
+}
+.image-card {
+  width: 100%;
+  @media all and (min-width: 1200px) {
+    width: 60%;
+  }
 }
 .link-home {
   background: linear-gradient(#d7ff00, #0bfb02);
@@ -86,20 +100,30 @@
   font-size: 30px;
 }
 .formulaire {
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px;
   color: #17a812;
+  max-width: 90%;
+  @media all and (min-width: 1200px) {
+    font-size: 30px;
+  }
 }
+
 .checkbox {
   margin: 20px;
   transform: scale(1.5);
 }
 .input {
+  font-size: 20px;
   height: 50px;
-  font-size: 25px;
   margin: 25px 0 25px 0;
+  max-width: 90%;
+  @media all and (min-width: 1200px) {
+    font-size: 30px;
+  }
 }
 
 .list-container {
