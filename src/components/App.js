@@ -38,21 +38,18 @@ const App = (props) => {
       .toLowerCase()
       .includes(search.toLowerCase());
     return characterSearch;
-
-    // if (isChecked === true) {
-    //   characterSearch.sort((a, b) => {
-    //     if (a.name > b.name) {
-    //       return 1;
-    //     }
-    //     if (a.name < b.name) {
-    //       return -1;
-    //     }
-    //     return 0;
-    //   });
-    // } else {
-    //   return characterSearch;
-    // }
   });
+  if (isChecked === true) {
+    filterCharacters.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      }
+      if (a.name < b.name) {
+        return -1;
+      }
+      return 0;
+    });
+  }
   //find characters
   const renderDetail = (props) => {
     const routeCharacterId = parseInt(props.match.params.characterId);
@@ -80,7 +77,7 @@ const App = (props) => {
   return (
     <>
       <Header />
-      <main className="main-container">
+      <main className="main-container" id="header">
         <Filter handleSearch={handleSearch} handleCheck={handleCheck} />
         <Switch>
           <Route exact path="/">

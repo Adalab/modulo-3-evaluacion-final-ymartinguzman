@@ -3,13 +3,14 @@ import React from 'react';
 const Filter = (props) => {
   const handleCheck = (ev) => {
     props.handleCheck(ev.currentTarget.checked);
+    console.log(ev.currentTarget.checked);
   };
 
   const handleSearch = (ev) => {
     props.handleSearch(ev.currentTarget.value);
   };
   return (
-    <div className="input-container">
+    <div className="input-container" id="abajo">
       <form className="formulaire">
         <label htmlFor="name"></label>Which character are you looking for?
         <input

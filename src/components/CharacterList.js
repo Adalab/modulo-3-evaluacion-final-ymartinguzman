@@ -8,9 +8,9 @@ const CharacterList = (props) => {
     return (
       <>
         <div className="container-results">
-          <Link to="/" className="linkresults">
-            Home
-          </Link>
+          {/* <button className="linkresults">
+            <a href="#main"></a> Home
+          </button> */}
           <img
             src={image}
             alt="No results founded"
