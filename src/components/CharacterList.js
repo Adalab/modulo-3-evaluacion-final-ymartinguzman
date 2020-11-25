@@ -8,9 +8,6 @@ const CharacterList = (props) => {
     return (
       <>
         <div className="container-results">
-          {/* <button className="linkresults">
-            <a href="#main"></a> Home
-          </button> */}
           <img
             className="picture"
             src={image}

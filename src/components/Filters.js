@@ -10,7 +10,7 @@ const Filter = (props) => {
     props.handleSearch(ev.currentTarget.value);
   };
   return (
-    <div className="input-container" id="abajo">
+    <div className="input-container">
       <form className="formulaire">
         <label htmlFor="name"></label>Which character are you looking for?
         <input

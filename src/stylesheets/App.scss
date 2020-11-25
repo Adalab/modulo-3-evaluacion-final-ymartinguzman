@@ -100,7 +100,6 @@
   height: 50px;
   font-size: 25px;
   margin: 25px 0 25px 0;
-  width: 450px;
 }
 
 .list-container {
@@ -108,6 +107,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 80px 200px 0 200px;
+  width: 90%;
   @media all and (min-width: 768px) {
     justify-content: center;
   }

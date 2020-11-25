@@ -77,7 +77,7 @@ const App = (props) => {
   return (
     <>
       <Header />
-      <main className="main-container" id="header">
+      <main className="main-container">
         <Filter handleSearch={handleSearch} handleCheck={handleCheck} />
         <Switch>
           <Route exact path="/">
