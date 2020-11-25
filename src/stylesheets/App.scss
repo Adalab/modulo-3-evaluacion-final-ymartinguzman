@@ -24,7 +24,7 @@
   animation-iteration-count: infinite;
   background: linear-gradient(#d7ff00, #0bfb02);
   margin-left: 48%;
-  margin-top: 22%;
+  margin-top: 50%;
   width: 120px;
   height: 50px;
   border: groove 1em #d7ff00;
@@ -69,14 +69,15 @@
   background: linear-gradient(#d7ff00, #0bfb02);
   padding: 25px;
   font-family: 'Orbitron', sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   border: floor($number: 0);
   border-radius: 1.5em;
-  margin-left: 31%;
-  position: absolute;
-  bottom: -540px;
+  margin-top: 50px;
   &:hover {
     color: black;
+  }
+  @media all and (min-width: 1200px) {
+    font-size: 30px;
   }
 }
 
@@ -92,7 +93,8 @@
   color: #17a812;
 }
 .checkbox {
-  font-size: 110%;
+  margin: 20px;
+  transform: scale(1.5);
 }
 .input {
   height: 50px;
@@ -129,11 +131,9 @@
 .container-results {
   text-align: center;
 }
-// .linkresults {
-//   background-color: yellowgreen;
-//   margin-right: 50px;
-// }
-
+.picture {
+  width: 90%;
+}
 @keyframes startButton {
   0% {
     top: -30.5px;

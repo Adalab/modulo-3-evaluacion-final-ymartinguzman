@@ -12,6 +12,7 @@ const CharacterList = (props) => {
             <a href="#main"></a> Home
           </button> */}
           <img
+            className="picture"
             src={image}
             alt="No results founded"
             title="No results founded"
