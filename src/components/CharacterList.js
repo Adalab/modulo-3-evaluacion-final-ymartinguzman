@@ -4,9 +4,15 @@ import { Link } from 'react-router-dom';
 import image from '../images/noresults.jpg';
 
 const CharacterList = (props) => {
+  const handleButtonHome = (ev) => {
+    props.handleButtonHome('');
+  };
   if (props.characters.length === 0) {
     return (
       <>
+        <button className="btn-home" onChange={handleButtonHome}>
+          Home
+        </button>
         <div className="container-results">
           <img
             className="picture"

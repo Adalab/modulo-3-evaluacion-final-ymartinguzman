@@ -32,6 +32,10 @@ const App = (props) => {
     setIsChecked(checked);
   };
 
+  const handleButtonHome = (ev) => {
+    setSearch(ev);
+  };
+
   //filter characters
   const filterCharacters = characters.filter((character) => {
     const characterSearch = character.name
@@ -56,7 +60,6 @@ const App = (props) => {
     const foundCharacter = characters.find((character) => {
       return routeCharacterId === character.id;
     });
-    console.log(foundCharacter);
 
     if (foundCharacter) {
       return (
@@ -84,6 +87,7 @@ const App = (props) => {
             <CharacterList
               characters={filterCharacters}
               handleSearch={handleSearch}
+              handleButtonHome={handleButtonHome}
             />
           </Route>
           <Route path="/character-detail/:characterId" render={renderDetail} />
