@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 const CharacterDetail = (props) => {
   return (
     <>
-      <Link to="/" className="link-home">
-        Back
-      </Link>
-
       <div className="card-container">
+        <Link to="/" className="link-home">
+          Back
+        </Link>
         <img src={props.image} alt={props.name} title={props.name}></img>
         <div className="card-details">
           <h2> {props.name}</h2>

@@ -44,9 +44,11 @@
   background-color: purple;
   width: 100%;
   padding-bottom: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .card-container {
-  margin-left: 42%;
   display: flex;
   width: 550px;
   height: 325px;
@@ -144,7 +146,3 @@
     top: -30.5px;
   }
 }
-// .footer {
-//   height: 300px;
-//   background-color: purple;
-// }
