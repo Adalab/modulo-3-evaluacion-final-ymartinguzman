@@ -1,8 +1,8 @@
 import '../stylesheets/App.scss';
 import api from '../services/api';
 import CharacterList from './CharacterList';
-import Filter from './Filters';
-import Header from './Header';
+import Filter from './Filter';
+import Landing from './Landing';
 import CharacterDetail from './CharacterDetail';
 import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
@@ -79,11 +79,11 @@ const App = (props) => {
 
   return (
     <>
-      <Header />
-      <main className="main-container">
-        <Filter handleSearch={handleSearch} handleCheck={handleCheck} />
-        <Switch>
-          <Route exact path="/">
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <main className="main-container">
+          <Route path="/main">
+            <Filter handleSearch={handleSearch} handleCheck={handleCheck} />
             <CharacterList
               characters={filterCharacters}
               handleSearch={handleSearch}
@@ -91,8 +91,8 @@ const App = (props) => {
             />
           </Route>
           <Route path="/character-detail/:characterId" render={renderDetail} />
-        </Switch>
-      </main>
+        </main>
+      </Switch>
     </>
   );
 };
