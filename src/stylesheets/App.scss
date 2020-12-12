@@ -41,9 +41,9 @@
     margin-top: 40%;
   }
   @media all and (min-width: 1200px) {
-    font-size: 35px;
-    width: 260px;
-    height: 130px;
+    font-size: 25px;
+    width: 225px;
+    height: 90px;
     text-align: center;
     margin-top: 23%;
   }
@@ -70,7 +70,7 @@
   margin: 60px;
   color: #3ed139;
   @media all and (min-width: 1200px) {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 .input {
@@ -83,7 +83,7 @@
     height: 50px;
   }
   @media all and (min-width: 1200px) {
-    font-size: 30px;
+    font-size: 25px;
     height: 70px;
   }
 }
@@ -95,12 +95,12 @@
 
 .list-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin: 80px 200px 0 200px;
-  @media all and (min-width: 1200px) {
+  @media all and (min-width: 768px) {
     justify-content: space-between;
+    margin: 0px 60px 0 60px;
+    flex-direction: row;
   }
 }
 .card {
@@ -139,7 +139,6 @@
   flex-direction: column;
   max-width: 90%;
   height: auto;
-  background-color: #35afc7;
   box-shadow: 0px 0px 24px 10px #35afc7;
   @media all and (min-width: 768px) {
     flex-direction: row;
@@ -149,7 +148,6 @@
 }
 .card-details {
   margin-left: 20px;
-  margin-top: 20px;
   line-height: 2.5;
   font-family: 'Special Elite', cursive;
   @media all and (min-width: 768px) {

@@ -10,9 +10,6 @@ const CharacterList = (props) => {
   if (props.characters.length === 0) {
     return (
       <>
-        <button className="btn-home" onChange={handleButtonHome}>
-          Home
-        </button>
         <div className="container-results">
           <img
             className="picture"
@@ -21,6 +18,9 @@ const CharacterList = (props) => {
             title="No results founded"
           ></img>
         </div>
+        <button className="btn-home" onChange={handleButtonHome}>
+          Home
+        </button>
       </>
     );
   }
