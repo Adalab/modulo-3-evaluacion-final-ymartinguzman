@@ -34,6 +34,7 @@ const App = (props) => {
 
   const handleButtonHome = (ev) => {
     setSearch(ev);
+    console.log(setSearch);
   };
 
   //filter characters

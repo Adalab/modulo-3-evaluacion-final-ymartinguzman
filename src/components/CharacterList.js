@@ -6,10 +6,14 @@ import image from '../images/noresults.jpg';
 const CharacterList = (props) => {
   const handleButtonHome = (ev) => {
     props.handleButtonHome('');
+    console.log(ev);
   };
   if (props.characters.length === 0) {
     return (
       <>
+        {/* <Link to="/" className="btn-header" title="Go to search characters">
+        START
+      </Link> */}
         <div className="container-results">
           <img
             className="picture"
