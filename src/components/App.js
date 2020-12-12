@@ -2,7 +2,7 @@ import '../stylesheets/App.scss';
 import api from '../services/api';
 import CharacterList from './CharacterList';
 import Filter from './Filter';
-import Landing from './Landing';
+import Header from './Header';
 import CharacterDetail from './CharacterDetail';
 import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
@@ -79,11 +79,11 @@ const App = (props) => {
 
   return (
     <>
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <main className="main-container">
-          <Route path="/main">
-            <Filter handleSearch={handleSearch} handleCheck={handleCheck} />
+      <Header />
+      <main className="main-container">
+        <Filter handleSearch={handleSearch} handleCheck={handleCheck} />
+        <Switch>
+          <Route exact path="/">
             <CharacterList
               characters={filterCharacters}
               handleSearch={handleSearch}
@@ -91,8 +91,11 @@ const App = (props) => {
             />
           </Route>
           <Route path="/character-detail/:characterId" render={renderDetail} />
-        </main>
-      </Switch>
+        </Switch>
+      </main>
+      <footer className="footer">
+        Coded with ❤️ by Yamira Martín and Blume 🐾
+      </footer>
     </>
   );
 };
