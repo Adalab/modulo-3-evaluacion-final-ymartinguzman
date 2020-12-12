@@ -45,7 +45,7 @@
     width: 260px;
     height: 130px;
     text-align: center;
-    margin-top: 40%;
+    margin-top: 23%;
   }
 }
 
@@ -96,10 +96,11 @@
 .list-container {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   margin: 80px 200px 0 200px;
-  @media all and (min-width: 768px) {
-    margin: 0;
+  @media all and (min-width: 1200px) {
+    justify-content: space-between;
   }
 }
 .card {
@@ -138,8 +139,7 @@
   flex-direction: column;
   max-width: 90%;
   height: auto;
-  // margin-top: 90px;
-  background-color: white;
+  background-color: #35afc7;
   box-shadow: 0px 0px 24px 10px #35afc7;
   @media all and (min-width: 768px) {
     flex-direction: row;
