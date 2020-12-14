@@ -8,13 +8,13 @@ Todos los personajes tienen su propia tarjeta identificativa. En ella se recogen
 - Nombre
 - Especie
 
-Haciendo uso de React Router, podemos acceder a los datos específicos de cada tarjeta donde se amplia información.
+Haciendo uso de React Router, podemos acceder a los datos específicos de cada tarjeta donde se amplía información.
 
-Es un ejercicio propuesto como método de evaluación final tras aprender a usar Reactjs en el Módulo 3 de Adalab.
+Es un ejercicio propuesto como método de evaluación final tras aprender a usar React.js en el Módulo 3 de Adalab.
 
 ## Características
 
-El proyecto está desarrollado con Reactjs en componentes funcionales.
+El proyecto está desarrollado con React.js en componentes funcionales.
 
 La información de los personajes la obtenemos a partir de datos de un servidor externo: https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json
 
@@ -48,7 +48,7 @@ Implementación y uso de React router
 
 ### Instalación
 
-Para crear proyecto nuevo
+Para crear un proyecto nuevo
 
 - npm install create-react-app
 
