@@ -188,6 +188,14 @@
   box-shadow: 10px 0 24px 10px #35afc7;
 }
 
+//FOOTER
+.footer {
+  text-align: center;
+  padding: 25px;
+  background-image: linear-gradient(90deg, purple 10%, #8cc8ac 90%);
+  opacity: 0.9;
+}
+
 @keyframes startButton {
   0% {
     top: -30.5px;
@@ -199,16 +207,4 @@
   100% {
     top: -30.5px;
   }
-}
-
-//FOOTER
-.footer {
-  text-align: center;
-  padding: 25px;
-  background-image: linear-gradient(90deg, purple 10%, #8cc8ac 90%);
-  opacity: 0.9;
-}
-
-.btn-up {
-  display: none;
 }

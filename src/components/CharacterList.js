@@ -7,7 +7,6 @@ import ButtonBack from './ButtonBack';
 const CharacterList = (props) => {
   const handleButtonHome = () => {
     props.handleButtonHome('');
-    console.log('me han clicado');
   };
   if (props.characters.length === 0) {
     return (
