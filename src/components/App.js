@@ -34,7 +34,6 @@ const App = (props) => {
 
   const handleButtonHome = (ev) => {
     setSearch(ev);
-    console.log(setSearch);
   };
 
   //filter characters
@@ -82,7 +81,12 @@ const App = (props) => {
     <>
       <Header />
       <main className="main-container">
-        <Filter handleSearch={handleSearch} handleCheck={handleCheck} />
+        <Filter
+          search={search}
+          handleSearch={handleSearch}
+          handleCheck={handleCheck}
+        />
+
         <Switch>
           <Route exact path="/">
             <CharacterList
@@ -94,6 +98,7 @@ const App = (props) => {
           <Route path="/character-detail/:characterId" render={renderDetail} />
         </Switch>
       </main>
+
       <footer className="footer">
         Coded with ❤️ by Yamira Martín and Blume 🐾
       </footer>

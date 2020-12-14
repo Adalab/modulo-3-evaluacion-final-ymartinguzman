@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
   const handleStart = () => {
@@ -10,9 +9,6 @@ const Header = () => {
       <button className="btn-header" onClick={handleStart}>
         START
       </button>
-      {/* <Link to="/" className="btn-header" title="Go to search characters">
-        START
-      </Link> */}
     </div>
   );
 };

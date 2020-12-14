@@ -2,18 +2,16 @@ import React from 'react';
 import CharacterCard from './CharacterCard';
 import { Link } from 'react-router-dom';
 import image from '../images/noresults.jpg';
+import ButtonBack from './ButtonBack';
 
 const CharacterList = (props) => {
-  const handleButtonHome = (ev) => {
+  const handleButtonHome = () => {
     props.handleButtonHome('');
-    console.log(ev);
+    console.log('me han clicado');
   };
   if (props.characters.length === 0) {
     return (
       <>
-        {/* <Link to="/" className="btn-header" title="Go to search characters">
-        START
-      </Link> */}
         <div className="container-results">
           <img
             className="picture"
@@ -22,12 +20,13 @@ const CharacterList = (props) => {
             title="No results founded"
           ></img>
         </div>
-        <button className="btn-home" onChange={handleButtonHome}>
+        <button className="btn-home" onClick={handleButtonHome}>
           Home
         </button>
       </>
     );
   }
+
   const html = props.characters.map((item) => (
     <li className="card" key={item.id}>
       <Link to={`/character-detail/${item.id}`} title="Character info">
@@ -46,6 +45,7 @@ const CharacterList = (props) => {
   return (
     <>
       <ul className="list-container">{html}</ul>
+      <ButtonBack />
     </>
   );
 };

@@ -52,14 +52,6 @@
 //MAIN-INPUT
 .main-container {
   background: linear-gradient(90deg, purple 10%, #8cc8ac 90%);
-  // background-image: linear-gradient(
-  //   to right,
-  //   purple,
-  //   #1d498c,
-  //   #0079a5,
-  //   #2ea3a9,
-  //   #8cc8ac
-  // );
   width: 100%;
   padding-bottom: 100px;
   display: flex;
@@ -175,7 +167,10 @@
   outline: none;
 
   &:hover {
-    color: black;
+    background: linear-gradient(90deg, purple 10%, #8cc8ac 90%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    transition: 1s ease-in-out;
+    color: #0bfb02;
   }
   @media all and (min-width: 1200px) {
     font-size: 30px;
@@ -211,13 +206,9 @@
   text-align: center;
   padding: 25px;
   background-image: linear-gradient(90deg, purple 10%, #8cc8ac 90%);
-  // background-image: linear-gradient(
-  //   to right,
-  //   purple,
-  //   #1d498c,
-  //   #0079a5,
-  //   #2ea3a9,
-  //   #8cc8ac
-  // );
   opacity: 0.9;
+}
+
+.btn-up {
+  display: none;
 }
