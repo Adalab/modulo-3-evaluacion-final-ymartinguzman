@@ -1,27 +1,33 @@
-# Descripción del proyecto
 
-La página web consiste en un buscardor por nombre de los personajes del universo Rick y Morty.
 
-Todos los personajes tienen su propia tarjeta identificativa. En ella se recogen unos datos mínimos:
+# Evaluación final módulo 3 Adalab
+
+Este ejercicio de evaluación consiste en crear una página web con React. Es un buscador de los personajes del universo Rick y Morty.
+
+A través del buscador, podemos filtrar por el nombre de los personajes y podemos ordenarlos alfabéticamente.
+
+Todos los personajes tienen su propia tarjeta identificativa donde se recogen unos datos mínimos:
 
 - Imagen
 - Nombre
 - Especie
 
-Haciendo uso de React Router, podemos acceder a los datos específicos de cada tarjeta donde se amplía información.
 
-Es un ejercicio propuesto como método de evaluación final tras aprender a usar React.js en el Módulo 3 de Adalab.
+Haciendo uso de React Router, podemos acceder a los datos específicos de cada tarjeta para ampliar la información.
+
 
 ## Características
 
-El proyecto está desarrollado con React.js en componentes funcionales.
+El proyecto está desarrollado con React.js en **componentes funcionales**.
 
 La información de los personajes la obtenemos a partir de datos de un servidor externo: https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json
 
-Se puede obtener mas información sobre cada personaje clickando sobre ellos.
+Los personajes pueden filtrarse por nombre y por orden alfabético, y en caso de no obtener resultados que coincidan, se muestra siempre la misma imagen "No results found".
 
-Se inicia una nueva ruta donde aparecen los datos iniciales junto a otros datos más específicos.
-Implementación y uso de React router
+Se puede obtener mas información sobre cada personaje clickando sobre cada tarjeta, que abre una nueva ruta donde aparecen los datos iniciales junto con otros datos más específicos.
+
+Desde cada nueva ruta, tenemos acceso al inicio de la página mediente botones.
+
 
 ## Estructura de carpetas
 
@@ -48,14 +54,33 @@ Implementación y uso de React router
 
 ### Instalación
 
-Para crear un proyecto nuevo
+Instalar React.js 
 
-- npm install create-react-app
+`npm install create-react-app`
+
+Crear un proyecto nuevo
+
+`create-react-app nombre-del-proyecto`
+
+Arrancar el proyecto
+`cd nombre-del-proyecto`
+
+`npm start`
+
 
 Instalar dependecias de:
 
-- Sass npm install node-sass // npm install node-sass@4.14.1
-- PropTypes npm install --save prop-types
-- React Router npm install --save react-router-dom
+- Sass 
+
+`npm install node-sass`  `npm install node-sass@4.14.1`
+
+- PropTypes 
+
+`npm install --save prop-types`
+
+- React Router 
+
+`npm install --save react-router-dom`
+
 
 Happy coding!
